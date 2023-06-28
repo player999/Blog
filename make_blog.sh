@@ -1,3 +1,3 @@
 #!/bin/sh
 #Expectin JAVA_HOME to be set
-../jbake/bin/jbake ./ ../blog_publish
+../jbake/bin/jbake $1 ./ ../blog_publish
