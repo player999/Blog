@@ -6,10 +6,25 @@
     <atom:link href="https://player999.github.io/Blog/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Thu, 29 Jun 2023 00:13:39 +0300</pubDate>
-    <lastBuildDate>Thu, 29 Jun 2023 00:13:39 +0300</lastBuildDate>
+    <pubDate>Sun, 2 Jul 2023 23:14:59 +0300</pubDate>
+    <lastBuildDate>Sun, 2 Jul 2023 23:14:59 +0300</lastBuildDate>
 
     <item>
+      <title>Enabling hypervisor of required type in Windows 11</title>
+      <link>https://player999.github.io/Blog/blog/2023/enable_hypervizor_type2.html</link>
+      <pubDate>Sun, 2 Jul 2023 00:00:00 +0300</pubDate>
+      <guid isPermaLink="false">blog/2023/enable_hypervizor_type2.html</guid>
+      <description>&amp;lt;p&amp;gt;Unfortunately, in Windows 11 one cannot have both type 1 and type 2 hypervisors enabled. A common consequence of this is following two cases:&amp;lt;br&amp;gt; 1. Virtualbox and VMWare Workstation working, but Windows Subsystem For Linux / Windows Sandbox does not&amp;lt;br&amp;gt; 2. Windows Subsystem For Linux and Windows Sandbox are working, but Virtualbox and VMWare Workstation are not.&amp;lt;br&amp;gt; As an illustration for second case is inability of VMWare player effectively virtualise Macs OS X on Windows 11 host:&amp;lt;br&amp;gt; &amp;lt;img src=&amp;quot;https://player999.github.io/Blog/img/Screenshot%202023-07-02%20211913.png&amp;quot; alt=&amp;quot;VMWare player failure&amp;quot;&amp;gt;&amp;lt;/p&amp;gt; 
+&amp;lt;p&amp;gt;In order to switch from Hypervisor type 1 to type 2.&amp;lt;/p&amp;gt; 
+&amp;lt;p&amp;gt;Run as admin&amp;lt;/p&amp;gt; 
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;bcdedit /set hypervisorlaunchtype disable
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt; 
+&amp;lt;p&amp;gt;to switch it back use&amp;lt;/p&amp;gt; 
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;bcdedit /set hypervisorlaunchtype auto
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt; 
+&amp;lt;p&amp;gt;Go to &amp;quot;Turn Windows features on or off&amp;quot; and un-check &amp;quot;Virtual Machine Platform&amp;quot;&amp;lt;/p&amp;gt; 
+&amp;lt;p&amp;gt;After those operation your VMWare Workstation / Virtualbox will support virtualisation properly&amp;lt;/p&amp;gt;</description>	  
+    </item><item>
       <title>My favorite tech/sci channels</title>
       <link>https://player999.github.io/Blog/blog/2023/favorite-tech-channels.html</link>
       <pubDate>Wed, 28 Jun 2023 00:00:00 +0300</pubDate>
