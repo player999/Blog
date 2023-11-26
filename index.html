@@ -43,6 +43,13 @@
 			</div>
 			
 			<div>
+				<a href='blog/2023/rust_on_mbed.html'><h1>Opinion on Embedded Rust as of 2023</h1></a>
+				<p>26 November 2023</p>
+				<p><p>It is not ready yet. I had experience with RP2040 chip and would like to share it<br> Here several of my points why it is not ready:<br> 1. Without std library there is not so many useful applications. Especially if to talk about http server<br> 2. Feature flags compatibility and configuration on Rust is a nightmare!<br> 3. Constant need to wrap code that accessing HW into unsafe block. I have so many of such wraps that the unsafe block loses it's original purpose</p> 
+<p>Bottom lines. If you want to use Rust in embedded applications, be sure to have std library support. ESP32 (not ESP8266 unfortunately) has such. Also maybe it is not so good idea -- to write everything on Rust.</p></p>
+			</div>
+			
+			<div>
 				<a href='blog/2023/enable_hypervizor_type2.html'><h1>Enabling hypervisor of required type in Windows 11</h1></a>
 				<p>02 July 2023</p>
 				<p><p>Unfortunately, in Windows 11 one cannot have both type 1 and type 2 hypervisors enabled. A common consequence of this is following two cases:<br> 1. Virtualbox and VMWare Workstation working, but Windows Subsystem For Linux / Windows Sandbox does not<br> 2. Windows Subsystem For Linux and Windows Sandbox are working, but Virtualbox and VMWare Workstation are not.<br> As an illustration for second case is inability of VMWare player effectively virtualise Macs OS X on Windows 11 host:<br> <img src="https://player999.github.io/Blog/img/Screenshot%202023-07-02%20211913.png" alt="VMWare player failure"></p> 

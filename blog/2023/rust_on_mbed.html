@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	    <meta charset="utf-8"/>
+	    <title>Opinion on Embedded Rust as of 2023</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	    <meta name="description" content=""/>
+	    <meta name="author" content=""/>
+	    <meta name="keywords" content=""/>
+	    <meta name="generator" content="JBake"/>
+	
+	    <!-- Le styles -->
+	    <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+	    <link href="../../css/asciidoctor.css" rel="stylesheet"/>
+	    <link href="../../css/base.css" rel="stylesheet"/>
+	    <link href="../../css/prettify.css" rel="stylesheet"/>
+	    <link rel="shortcut icon" href="../../favicon.ico"/>
+	</head>
+	<body>
+	<div id="wrap">
+		<div>
+	
+	  <!-- Fixed navbar -->
+      <div class="navbar navbar-default navbar-sticky-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../../">Taras's blog</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+	</div>
+		<div class="container">
+	
+			<div class="page-header">
+				<h1>Opinion on Embedded Rust as of 2023</h1>
+			</div>
+		
+			<p><em>26 November 2023</em></p>
+		
+			<p><p>It is not ready yet. I had experience with RP2040 chip and would like to share it<br> Here several of my points why it is not ready:<br> 1. Without std library there is not so many useful applications. Especially if to talk about http server<br> 2. Feature flags compatibility and configuration on Rust is a nightmare!<br> 3. Constant need to wrap code that accessing HW into unsafe block. I have so many of such wraps that the unsafe block loses it's original purpose</p> 
+<p>Bottom lines. If you want to use Rust in embedded applications, be sure to have std library support. ESP32 (not ESP8266 unfortunately) has such. Also maybe it is not so good idea -- to write everything on Rust.</p></p>
+		
+			<hr />
+			
+		</div>
+	</div>
+	<div>
+			<div id="push"></div>
+    
+		    <div id="footer">
+		      <div class="container">
+		        <p class="muted credit">&copy; 2023 | Baked with <a href="http://jbake.org">JBake <span>v2.6.7</span></a></p>
+		      </div>
+		    </div>
+    	</div>
+    </body>
+</html>

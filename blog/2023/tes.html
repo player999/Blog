@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	    <meta charset="utf-8"/>
+	    <title>No Enabling hypervisor of required type in Windows 11</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	    <meta name="description" content=""/>
+	    <meta name="author" content=""/>
+	    <meta name="keywords" content=""/>
+	    <meta name="generator" content="JBake"/>
+	
+	    <!-- Le styles -->
+	    <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+	    <link href="../../css/asciidoctor.css" rel="stylesheet"/>
+	    <link href="../../css/base.css" rel="stylesheet"/>
+	    <link href="../../css/prettify.css" rel="stylesheet"/>
+	    <link rel="shortcut icon" href="../../favicon.ico"/>
+	</head>
+	<body>
+	<div id="wrap">
+		<div>
+	
+	  <!-- Fixed navbar -->
+      <div class="navbar navbar-default navbar-sticky-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../../">Taras's blog</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+	</div>
+		<div class="container">
+	
+			<div class="page-header">
+				<h1>No Enabling hypervisor of required type in Windows 11</h1>
+			</div>
+		
+			<p><em>26 November 2023</em></p>
+		
+			<p><p>Unfortunately, in Windows 11 one cannot have both type 1 and type 2 hypervisors enabled. A common consequence of this is following two cases:<br> 1. Virtualbox and VMWare Workstation working, but Windows Subsystem For Linux / Windows Sandbox does not<br> 2. Windows Subsystem For Linux and Windows Sandbox are working, but Virtualbox and VMWare Workstation are not.<br> As an illustration for second case is inability of VMWare player effectively virtualise Macs OS X on Windows 11 host:<br> <img src="https://player999.github.io/Blog/img/Screenshot%202023-07-02%20211913.png" alt="VMWare player failure"></p> 
+<p>In order to switch from Hypervisor type 1 to type 2.</p> 
+<p>Run as admin</p> 
+<pre><code>bcdedit /set hypervisorlaunchtype disable
+</code></pre> 
+<p>to switch it back use</p> 
+<pre><code>bcdedit /set hypervisorlaunchtype auto
+</code></pre> 
+<p>Go to "Turn Windows features on or off" and un-check "Virtual Machine Platform"</p> 
+<p>After those operation your VMWare Workstation / Virtualbox will support virtualisation properly</p></p>
+		
+			<hr />
+			
+		</div>
+	</div>
+	<div>
+			<div id="push"></div>
+    
+		    <div id="footer">
+		      <div class="container">
+		        <p class="muted credit">&copy; 2023 | Baked with <a href="http://jbake.org">JBake <span>v2.6.7</span></a></p>
+		      </div>
+		    </div>
+    	</div>
+    </body>
+</html>

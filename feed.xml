@@ -6,10 +6,17 @@
     <atom:link href="https://player999.github.io/Blog/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Mon, 3 Jul 2023 23:38:11 +0300</pubDate>
-    <lastBuildDate>Mon, 3 Jul 2023 23:38:11 +0300</lastBuildDate>
+    <pubDate>Sun, 26 Nov 2023 22:54:24 +0200</pubDate>
+    <lastBuildDate>Sun, 26 Nov 2023 22:54:24 +0200</lastBuildDate>
 
     <item>
+      <title>Opinion on Embedded Rust as of 2023</title>
+      <link>https://player999.github.io/Blog/blog/2023/rust_on_mbed.html</link>
+      <pubDate>Sun, 26 Nov 2023 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">blog/2023/rust_on_mbed.html</guid>
+      <description>&amp;lt;p&amp;gt;It is not ready yet. I had experience with RP2040 chip and would like to share it&amp;lt;br&amp;gt; Here several of my points why it is not ready:&amp;lt;br&amp;gt; 1. Without std library there is not so many useful applications. Especially if to talk about http server&amp;lt;br&amp;gt; 2. Feature flags compatibility and configuration on Rust is a nightmare!&amp;lt;br&amp;gt; 3. Constant need to wrap code that accessing HW into unsafe block. I have so many of such wraps that the unsafe block loses it&amp;#39;s original purpose&amp;lt;/p&amp;gt; 
+&amp;lt;p&amp;gt;Bottom lines. If you want to use Rust in embedded applications, be sure to have std library support. ESP32 (not ESP8266 unfortunately) has such. Also maybe it is not so good idea -- to write everything on Rust.&amp;lt;/p&amp;gt;</description>	  
+    </item><item>
       <title>Enabling hypervisor of required type in Windows 11</title>
       <link>https://player999.github.io/Blog/blog/2023/enable_hypervizor_type2.html</link>
       <pubDate>Sun, 2 Jul 2023 00:00:00 +0300</pubDate>
